@@ -7,8 +7,18 @@
 
 #include <malloc.h>
 
+typedef struct Task
+{
+    void (*function)(void *arg);
+
+    void *arg;
+} Task;
+
+
 typedef struct ThreadPool ThreadPool;
 
 ThreadPool *threadPoolCreate(int min, int max, int queueSize);
+
+void *worker(void *arg);
 
 #endif //MYTHREADPOOLC_THREADPOOL_H
