@@ -21,4 +21,6 @@ ThreadPool *threadPoolCreate(int min, int max, int queueSize);
 
 void *worker(void *arg);
 
+void *manager(void *arg);
+
 #endif //MYTHREADPOOLC_THREADPOOL_H
